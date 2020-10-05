@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    
+   
+    
+    <head>
+        
+        <title> Assemble Table  </title>
+        
+        <meta charset="UTF-8">
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+   
+    
+    
+    <body onkeyup="checkcomplete()">  
+        
+       
+     <section  onkeydown=" return filter(this)" onkeyup="check();">   
+      
+                      
+        <style> 
+        
+        input
+        {background-color: lightgrey; font-weight: 300; font-size: 236%; width:4%; text-align: center; border: none; font-stretch: condensed; margin-top: 0.3%}
+        
+        </style> 
+   
+        
+                      
+       <section style=" float: left; position: absolute">
+           
+           
+       <img style="width:100%; color: white; margin-top: 2%">    
+       
+       
+       <input type="text" name="h" id="1" maxlength="2" style=" margin-left: 9%">            
+       <input type="text" name="he" id="2" maxlength="2" style=" margin-left: 72.3%"> 
+       
+       <br>
+                  
+       <input type="text" name="li" id="3" maxlength="2" style=" margin-left: 9%">  <input type="text" name="be" id="4" maxlength="2" >
+ 
+       
+       <input type="text" name="b" id="5" maxlength="2" style=" margin-left: 45.2%"> <input type="text" name="c" id="6" maxlength="2"> <input type="text" name="n" id="7" maxlength="2">
+       <input type="text" name="o" id="8" maxlength="2"> <input type="text" name="f" id="9" maxlength="2"> <input type="text" name="ne" id="10" maxlength="2">
+   
+       <br> 
+         
+       <input type="text" name="na" id="11" maxlength="2" style=" margin-left: 9%">  <input type="text" name="mg" id="12" maxlength="2">
+       
+              
+       <input type="text" name="al" id="13" maxlength="2" style=" margin-left: 45.2%"> <input type="text" name="si" id="14" maxlength="2"> <input type="text" name="p" id="15" maxlength="2">
+       <input type="text" name="s" id="16" maxlength="2"> <input type="text" name="cl" id="17" maxlength="2"> <input type="text" name="ar" id="18" maxlength="2">
+       
+       <br> 
+             
+       <input type="text" name="k" id="19" maxlength="2" style=" margin-left: 9%"> <input type="text" name="ca" id="20" maxlength="2"> <input type="text" name="sc" id="21" maxlength="21">
+       <input type="text" name="ti" id="22" maxlength="2"> <input type="text" name="v" id="23" maxlength="2"> <input type="text" name="cr" id="24" maxlength="2">
+        
+       <input type="text" name="mn" id="25" maxlength="2"> <input type="text" name="fe" id="26" maxlength="2"> <input type="text" name="co" id="27" maxlength="2">
+       <input type="text" name="ni" id="28" maxlength="2"> <input type="text" name="cu" id="29" maxlength="2"> <input type="text" name="zn" id="30" maxlength="2">
+        
+       <input type="text" name="ga" id="31" maxlength="2"> <input type="text" name="ge" id="32" maxlength="2"> <input type="text" name="as" id="33" maxlength="2">
+       <input type="text" name="se" id="34" maxlength="2"> <input type="text" name="br" id="35" maxlength="2"> <input type="text" name="kr" id="36" maxlength="2">
+       
+       <br>
+         
+       <input type="text" name="rb" id="37" maxlength="2" style=" margin-left: 9%"> <input type="text" name="sr" id="38" maxlength="2"> <input type="text" name="y" id="39" maxlength="2">
+       <input type="text" name="zr" id="40" maxlength="2"> <input type="text" name="nb" id="41" maxlength="2"> <input type="text" name="mo" id="42" maxlength="2">
+        
+       <input type="text" name="tc" id="43" maxlength="2"> <input type="text" name="ru" id="44" maxlength="2"> <input type="text" name="rh" id="45" maxlength="2">
+       <input type="text" name="pd" id="46" maxlength="2"> <input type="text" name="ag" id="47" maxlength="2"> <input type="text" name="cd" id="48" maxlength="2">
+        
+       <input type="text" name="in" id="49" maxlength="2"> <input type="text" name="sn" id="50" maxlength="2"> <input type="text" name="sb" id="51" maxlength="2">
+       <input type="text" name="te" id="52" maxlength="2"> <input type="text" name="i" id="53" maxlength="2"> <input type="text" name="xe" id="54" maxlength="2">
+       
+       <br>
+               
+       <input type="text" name="cs" id="55" maxlength="2" style=" margin-left: 9%"> <input type="text" name="ba" id="56" maxlength="2"> <input disabled type="text" name="null_la" id="null_57" maxlength="2">
+      
+       <input type="text" name="hf" id="72" maxlength="2"> <input type="text" name="ta" id="73" maxlength="2"> <input type="text" name="w" id="74" maxlength="2">
+       <input type="text" name="re" id="75" maxlength="2"> <input type="text" name="os" id="76" maxlength="2"> <input type="text" name="ir" id="77" maxlength="2">
+        
+       <input type="text" name="pt" id="78" maxlength="2"> <input type="text" name="au" id="79" maxlength="2"> <input type="text" name="hg" id="80" maxlength="2">
+       <input type="text" name="tl" id="81" maxlength="2"> <input type="text" name="pb" id="82" maxlength="2"> <input type="text" name="bi" id="83" maxlength="2">
+     
+       <input type="text" name="po" id="84" maxlength="2"> <input type="text" name="at" id="85" maxlength="2"> <input type="text" name="rn" id="86" maxlength="2">
+   
+       <br>
+               
+       <input type="text" name="fr" id="87" maxlength="2" style=" margin-left: 9%"> <input type="text" name="ra" id="88" maxlength="2"> <input disabled type="text" name="null_ac" id="null_89" maxlength="2">
+       <input type="text" name="rf" id="104" maxlength="2"> <input type="text" name="db" id="105" maxlength="2"> <input type="text" name="sg" id="106" maxlength="2">
+        
+       <input type="text" name="bh" id="107" maxlength="2"> <input type="text" name="hs" id="108" maxlength="2"> <input type="text" name="mt" id="109" maxlength="2">
+       <input type="text" name="ds" id="110" maxlength="2"> <input type="text" name="rg" id="111" maxlength="2"> <input type="text" name="cn" id="112" maxlength="2">
+        
+       <input type="text" name="nh" id="113" maxlength="2"> <input type="text" name="fl" id="114" maxlength="2"> <input type="text" name="mc" id="115" maxlength="2">
+       <input type="text" name="lv" id="116" maxlength="2"> <input type="text" name="ts" id="117" maxlength="2"> <input type="text" name="og" id="118" maxlength="2">
+            
+       <img style="width:100%; color: white; margin-top: 2.9%">    
+                 
+       <input type="text" name="la" id="57" maxlength="2" style=" margin-left: 17.7%"> <input type="text" name="ce" id="58" maxlength="2"> <input type="text" name="pr" id="59" maxlength="2">
+       <input type="text" name="nd" id="60" maxlength="2"> <input type="text" name="pm" id="61" maxlength="2"> <input type="text" name="sm" id="62" maxlength="2">
+        
+       <input type="text" name="eu" id="63" maxlength="2"> <input type="text" name="gd" id="64" maxlength="2"> <input type="text" name="tb" id="65" maxlength="2">
+       <input type="text" name="dy" id="66" maxlength="2"> <input type="text" name="ho" id="67" maxlength="2"> <input type="text" name="er" id="68" maxlength="2">
+        
+       <input type="text" name="tm" id="69" maxlength="2"> <input type="text" name="yb" id="70" maxlength="2"> <input type="text" name="lu" id="71" maxlength="2">
+             
+       <br>
+           
+       <input type="text" name="ac" id="89" maxlength="2" style=" margin-left: 17.7%"> <input type="text" name="th" id="90" maxlength="2"> <input type="text" name="pa" id="91" maxlength="2">
+       <input type="text" name="u" id="92" maxlength="2"> <input type="text" name="np" id="93" maxlength="2"> <input type="text" name="pu" id="94" maxlength="2">
+        
+       <input type="text" name="am" id="95" maxlength="2"> <input type="text" name="cm" id="96" maxlength="2"> <input type="text" name="bk" id="97" maxlength="2">
+       <input type="text" name="cf" id="98" maxlength="2"> <input type="text" name="es" id="99" maxlength="2"> <input type="text" name="fm" id="100" maxlength="2">
+        
+       <input type="text" name="md" id="101" maxlength="2"> <input type="text" name="no" id="102" maxlength="2"> <input type="text" name="lr" id="103" maxlength="2">
+       
+       <br>
+       
+       </section>
+       
+       
+                
+        
+       <section style= "position: relative; margin-top: 1%">
+                    
+           <button  onclick="location.href = 'https://khaledek.github.io/PeriodicTableTest/';" id="clear" style=" outline: none; margin-left: 0.9%; border-style: none; background-image: url(back.png); font-size: 190%; background-size: 90%; background-repeat: no-repeat; background-position: center; background-color: white; color: lightgrey; color: transparent; width: 3% ">.</button>
+
+           
+           <button  onclick="classclick()" id="classify" style=" outline: none; margin-left: 29%; border-style: none; background-image: url(class.png); font-size: 120%; background-size: 70%; background-repeat: no-repeat; background-position: center; background-color: white; color: lightgrey; color: transparent; width: 3%">.</button>
+
+           <button  onclick="clearout()" id="clear" style=" outline: none; margin-left: 2%; border-style: none; background-image: url(erase.png); font-size: 120%; background-size: 60%; background-repeat: no-repeat; background-position: center; background-color: white; color: lightgrey; color: transparent; width: 3% ">.</button>
+
+           <button  onmousedown="peek()" onmouseup="back()" onmouseout="back()" id="peak" style=" outline: none; margin-left: 2%; border-style: none; background-image: url(peek.png); font-size: 120%; background-size: 90%; background-repeat: no-repeat; background-position: center; background-color: white; color: lightgrey; color: transparent; width: 3% ">.</button>
+     
+       </section>         
+
+       
+       
+       
+       
+       <script>    
+          
+       function semifill()   //not used
+       {
+           for (var e = 1; e <= 118; e++ ) 
+           {  
+              var name = document.getElementById(e).name;
+            
+              document.getElementById(e).value =  name.substr(0,1).toUpperCase() + name.substr(1,2).toLowerCase();
+            
+              document.getElementById(e).style.color = "darkslategrey";
+            }             
+       }
+       
+       </script>
+       
+       
+       
+       
+       
+       <script>
+       
+       var alkalis = [3, 11, 19, 37, 55, 87];
+       var alkaliearths = [4, 12, 20, 38, 56,88];
+       var gases = [1, 6, 7, 8, 15, 16, 34];
+       var nobelgases = [2, 10, 18, 36, 54, 86];
+       var halogens = [9, 17, 35, 53, 85];
+       var metalloids = [5, 14, 32, 33, 51, 52];
+       var posttransition = [13, 31, 49, 50, 81, 82, 83, 84, 85, 30, 48, 80];
+       var transitionmetals = [22, 23, 24, 25, 26, 27, 28, 29, 39, 40, 41, 42, 43, 44, 45, 46, 47, 72, 73, 74, 75, 76, 77, 78, 79, 104];
+       var lanthanides = [57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71];
+       var actinides = [89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 102, 103];
+       var un = [109, 110, 111, 112, 113, 114, 115, 116, 117, 118];
+       
+       var classclickv = 0;
+     
+       var table = [];      
+       for (var e = 1; e <= 118; e++) { table.push(e); }
+                  
+       var excl = [];
+                      
+       for (var l=48;  l <= 57; l++) { excl.push(l);}
+       for (var l1=96;  l1 <= 111; l1++) { excl.push(l1);}
+       for (var l2=186;  l2 <= 222; l2++) { excl.push(l2);}
+        
+                 
+       </script>
+       
+       
+       
+
+              
+       <script>
+       
+    
+    
+    
+       function filter()
+       {
+           if(document.activeElement.id != "")
+           {
+               if(excl.includes(window.event.keyCode)) { return false; }
+           }        
+       }
+        
+        
+        
+    
+       function check()
+       {                       
+           document.activeElement.style.color = "black";
+           
+           var ans = document.activeElement.value;        
+                    
+           if(ans.toLowerCase() == document.activeElement.name)
+           {                      
+              var next_index = Number(document.activeElement.id) + 1;
+                        
+              correct();
+            
+              document.getElementById(next_index).focus();                  
+           }
+           else
+           {
+               if(document.activeElement.value.length == 2){ document.activeElement.style.color = " #4d0000";}
+           }                           
+       }
+       
+           
+     
+       function correct() 
+       {          
+           var string = document.activeElement.value;
+           
+           document.activeElement.style.color = "darkslategrey";
+       
+           document.activeElement.value = string.substr(0,1).toUpperCase() + string.substr(1,2).toLowerCase();
+       }
+       
+       
+       
+ 
+       function classify() 
+       {
+
+        alkalis.forEach(classal);        
+        function classal(item) { document.getElementById(item).style.backgroundColor = "orange"; }
+        
+        alkaliearths.forEach(classe);
+        function classe(item) { document.getElementById(item).style.backgroundColor = " #ffff4d"; }
+        
+        gases.forEach(classgas);
+        function classgas(item) { document.getElementById(item).style.backgroundColor = "lightgreen"; }
+        
+        nobelgases.forEach(classnobel);
+        function classnobel(item) { document.getElementById(item).style.backgroundColor = " #00aaff"; }
+        
+        halogens.forEach(classgas);
+        function classgens(item) { document.getElementById(item).style.backgroundColor = "aqua"; }
+        
+        metalloids.forEach(classoids);
+        function classoids(item) { document.getElementById(item).style.backgroundColor = " #c3c388"; }
+        
+        posttransition.forEach(classt);
+        function classt(item) { document.getElementById(item).style.backgroundColor = " #ABABAB"; }
+        
+        lanthanides.forEach(classla);
+        function classla(item) { document.getElementById(item).style.backgroundColor = "pink"; }
+        
+        actinides.forEach(classac);
+        function classac(item) { document.getElementById(item).style.backgroundColor = "violet"; }
+        
+        un.forEach(classun);
+        function classun(item) { document.getElementById(item).style.backgroundColor = "#EFEFEF"; }
+                                                            
+       }
+       
+
+    
+       function classclick() 
+       { 
+           if (classclickv < 1) { classify(); classclickv = 1}
+           else { noclassify(); classclickv = 0; }
+       }
+      
+         
+       function noclassify() {table.forEach(noclass); function noclass(item){ document.getElementById(item).style.backgroundColor = "lightgrey";}}
+      
+    
+    
+    
+       function peek()
+       {
+          table.forEach(fill);
+           
+           function fill(item) 
+           {
+               if(document.getElementById(item).style.color != "darkslategrey") 
+               {
+                  var nm = document.getElementById(item).name;
+                   
+                  document.getElementById(item).value = nm.substr(0,1).toUpperCase() + nm.substr(1,2).toLowerCase();  
+             
+                  document.getElementById(item).style.color = "grey";               
+               }              
+           }
+       }
+       
+       
+     
+    
+       function back()
+       {
+           table.forEach(out);
+           
+           function out(item) 
+           {          
+              if (document.getElementById(item).style.color == "grey") 
+              {
+                  document.getElementById(item).value = "";
+                  document.getElementById(item).style.color = "black"; 
+              }
+           }                   
+       }
+       
+       
+       
+       
+       function clearout() 
+       {              
+           table.forEach(out);
+           
+           function out(item) 
+           {
+           
+              document.getElementById(item).value = ""; 
+              document.getElementById(item).style.color = "black"; 
+              mark = 0;
+              document.getElementById(item).style.fontWeight = "300";     
+           }
+       }
+
+
+       
+
+        function checkcomplete() 
+        {                       
+           var mark = 0;
+            
+           for (var e = 1; e <= 118; e++ ) 
+           {
+              if (document.getElementById(e).value.toLowerCase() == document.getElementById(e).name)
+              {
+                  mark++;
+                                
+                if (mark == 118)
+                  {                 
+                    for (var e = 1; e <= 118; e++ ) 
+                     {           
+                        document.getElementById(e).style.fontWeight = "600";       
+                     }                         
+                  } 
+                  
+                  else { document.getElementById(e).style.fontWeight = "300"; }            
+               }          
+            }                 
+        }
+
+       
+        
+       </script>
+       
+    </section>
+        
+
+   </body>   
+                    
+</html>
+
