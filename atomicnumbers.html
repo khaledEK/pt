@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    
+    <head>
+        
+        <title>Atomic Number Test</title>
+        
+        <meta charset="UTF-8">    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    </head>
+    
+    
+    <body>
+      
+    
+    <div style= "width: 1366px; float: center; margin: auto"> 
+
+        
+      <section style="width: 33%; float: left">  
+        
+            <section style= "margin-top: 0.3%; float: left; position: absolute">
+                    
+               <button  onclick="location.href = 'https://khaledek.github.io/pt/';" id="clear" style=" outline: none; margin-left: 0.9%; border-style: none; background-image: url(back.png); font-size: 220%; background-size: 100%; background-repeat: no-repeat; background-position: center; background-color: white; color: lightgrey; color: transparent; width: 36% ">..........</button>
+          
+            </section>       
+          
+            
+       <section style="float: left">    
+            
+        <button id="next" style="border: solid; border-color: darkslategrey; border-width: 1px; background-color: white; color: darkslategrey; font-weight: 500; position: absolute; font-size: 132%; width: 7.9%; margin-left: 5.5%; margin-top: 19%">Next</button>
+                    
+        <button onclick="skip()" id="skip" style="border: solid; border-color: darkslategrey; border-width: 1px; background-color: white; color: darkslategrey; font-weight: 500; position: absolute; font-size: 132%; width: 7.9%; margin-left: 14%; margin-top: 19%">Skip</button>               
+                
+        <input onmousedown="return false" id="task" value="Es" type="text" style="color: darkslategrey; background-color: white; width: 17%; font-size: 920%; text-align: center; margin-top: 9%; margin-left: 5.5%; position: absolute; border: none; font-weight: 490;font-family: times">
+      
+        <input onkeydown="return filter(this)" id="input" value="99" type="text" maxlength="3" style=" outline: none; color: darkslategrey; background-color: white; width: 11%; font-size: 347%; text-align: center; font-weight: 500; margin-top: 7%; margin-left: 3.99%; position: absolute; border: none">
+
+        </section>    
+                
+      </section>
+     
+        
+        <section style="float: right; width: 37%">
+            
+
+            <input onmousedown="return false" value="Question" type="text" style="color: darkslategrey; width: 61.5%; background-color: white; border: none; text-align: right; font-size: 200%; margin-top: 20%; font-family: times; font-weight: 490; float: left">
+           
+            <button onclick="tasker()" id="tasker" style=" color: darkslategrey; position: relative; font-size: 160%; margin-top: 20%; margin-left: 3%; background-color: white; border: solid; border-width: 1px; float: left">25</button>
+                   
+            <input id="question" onmousedown="return false" type="text" style="color: lightgrey; width: 100%; background-color: white; border: none; text-align: center; font-size: 200%; margin-top: 3.2%; font-family: Arial">
+            
+            <input onmousedown="return false" type="text" value="Mistakes" style="color: darkslategrey; width: 100%; background-color: white; border: none; text-align: center; font-size: 200%; margin-top: 11%; font-family: times; font-weight: 490">
+            
+            <input id = "mistakes" onmousedown="return false"  value="" type="text" style="color: lightgrey; width: 100%; background-color: white; border: none; text-align: center; font-size: 200%; margin-top: 3.2%; font-family: Arial">
+             
+            <input onmousedown="return false" type="text" value ="Pauses" style="color: darkslategrey; width: 100%; background-color: white; border: none; text-align: center; font-size: 200%; margin-top: 11%; font-family: times; font-weight: 490">
+            
+            <input id="pauses" onmousedown="return false"  value="" type="text" style="color: lightgrey; width: 100%; background-color: white; border: none; text-align: center; font-size: 200%; margin-top: 3.2%; font-family: Arial">
+
+                        
+        </section>
+                
+         
+        
+              
+           
+        <section style="background-color: darkslategrey; width: 25%; float: right"> 
+        
+            
+            <input id="status" onmousedown="return false" type="text" style="background-color: darkslategrey; border: none; margin-top: 27%; width:96%; font-size: 170%; color: white; text-align:center; font-family: Georgia" value="Get ready!">    
+
+            <input  id="time" onmousedown="return false" type="text" style=" background-color: darkslategrey; border: none; margin-top: 20%; width:96%; font-size: 600%; color: white; text-align:center" value="30">    
+            
+            <button onclick="control()" id="main" style="background-color: darkslategrey; color: white; border: solid; border-color: white; font-size: 170%; width: 60%; margin-left: 19%; margin-top: 11%">Start</button>
+             
+            <br>                 
+  
+            <button  style="position: relative; font-size: 160%; margin-top: 67.9%; background-color: darkslategrey; border: none"></button>
+
+
+
+        </section>
+        
+
+        </div>
+
+
+       <section>
+        
+       <input type="text" name="h" id="1" hidden>   <input type="text" name="he" id="2" hidden> 
+       <input type="text" name="li" id="3" hidden>  <input type="text" name="be" id="4" hidden>       
+       <input type="text" name="b" id="5" hidden>   <input type="text" name="c" id="6" hidden> 
+       <input type="text" name="n" id="7" hidden>   <input type="text" name="o" id="8" hidden>
+       <input type="text" name="f" id="9" hidden>   <input type="text" name="ne" id="10" hidden>
+       <input type="text" name="na" id="11" hidden> <input type="text" name="mg" id="12" hidden>                            
+       <input type="text" name="al" id="13" hidden> <input type="text" name="si" id="14" hidden> 
+       <input type="text" name="p" id="15" hidden>  <input type="text" name="s" id="16" hidden>
+       <input type="text" name="cl" id="17" hidden> <input type="text" name="ar" id="18" hidden>
+       <input type="text" name="k" id="19" hidden>  <input type="text" name="ca" id="20" hidden> 
+       <input type="text" name="sc" id="21" hidden> <input type="text" name="ti" id="22" hidden>
+       <input type="text" name="v" id="23" hidden>  <input type="text" name="cr" id="24" hidden>        
+       <input type="text" name="mn" id="25" hidden> <input type="text" name="fe" id="26" hidden> 
+       <input type="text" name="co" id="27" hidden> <input type="text" name="ni" id="28" hidden> 
+       <input type="text" name="cu" id="29" hidden> <input type="text" name="zn" id="30" hidden>        
+       <input type="text" name="ga" id="31" hidden> <input type="text" name="ge" id="32" hidden>
+       <input type="text" name="as" id="33" hidden> <input type="text" name="se" id="34" hidden> 
+       <input type="text" name="br" id="35" hidden> <input type="text" name="kr" id="36" hidden>
+       <input type="text" name="rb" id="37" hidden> <input type="text" name="sr" id="38" hidden> 
+       <input type="text" name="y" id="39" hidden>  <input type="text" name="zr" id="40" hidden> 
+       <input type="text" name="nb" id="41" hidden> <input type="text" name="mo" id="42" hidden>        
+       <input type="text" name="tc" id="43" hidden> <input type="text" name="ru" id="44" hidden> 
+       <input type="text" name="rh" id="45" hidden> <input type="text" name="pd" id="46" hidden> 
+       <input type="text" name="ag" id="47" hidden> <input type="text" name="cd" id="48" hidden>       
+       <input type="text" name="in" id="49" hidden> <input type="text" name="sn" id="50" hidden> 
+       <input type="text" name="sb" id="51" hidden> <input type="text" name="te" id="52" hidden> 
+       <input type="text" name="i" id="53" hidden> <input type="text" name="xe" id="54" hidden>
+       <input type="text" name="cs" id="55" hidden> <input type="text" name="ba" id="56" hidden>           
+       <input type="text" name="la" id="57" hidden> <input type="text" name="ce" id="58" hidden> 
+       <input type="text" name="pr" id="59" hidden> <input type="text" name="nd" id="60" hidden> 
+       <input type="text" name="pm" id="61" hidden> <input type="text" name="sm" id="62" hidden>        
+       <input type="text" name="eu" id="63" hidden> <input type="text" name="gd" id="64" hidden> 
+       <input type="text" name="tb" id="65" hidden> <input type="text" name="dy" id="66" hidden> 
+       <input type="text" name="ho" id="67" hidden> <input type="text" name="er" id="68" hidden>
+       <input type="text" name="tm" id="69" hidden> <input type="text" name="yb" id="70" hidden> 
+       <input type="text" name="lu" id="71" hidden> <input type="text" name="hf" id="72" hidden> 
+       <input type="text" name="ta" id="73" hidden> <input type="text" name="w" id="74" hidden>
+       <input type="text" name="re" id="75" hidden> <input type="text" name="os" id="76" hidden> 
+       <input type="text" name="ir" id="77" hidden> <input type="text" name="pt" id="78" hidden> 
+       <input type="text" name="au" id="79" hidden> <input type="text" name="hg" id="80" hidden>
+       <input type="text" name="tl" id="81" hidden> <input type="text" name="pb" id="82" hidden> 
+       <input type="text" name="bi" id="83" hidden> <input type="text" name="po" id="84" hidden> 
+       <input type="text" name="at" id="85" hidden> <input type="text" name="rn" id="86" hidden>
+       <input type="text" name="fr" id="87" hidden> <input type="text" name="ra" id="88" hidden> 
+       <input type="text" name="ac" id="89" hidden> <input type="text" name="th" id="90" hidden> 
+       <input type="text" name="pa" id="91" hidden> <input type="text" name="u" id="92" hidden> 
+       <input type="text" name="np" id="93" hidden> <input type="text" name="pu" id="94" hidden>        
+       <input type="text" name="am" id="95" hidden> <input type="text" name="cm" id="96" hidden> 
+       <input type="text" name="bk" id="97" hidden> <input type="text" name="cf" id="98" hidden> 
+       <input type="text" name="es" id="99" hidden> <input type="text" name="fm" id="100" hidden>        
+       <input type="text" name="md" id="101" hidden> <input type="text" name="no" id="102" hidden> 
+       <input type="text" name="lr" id="103" hidden> <input type="text" name="rf" id="104" hidden> 
+       <input type="text" name="db" id="105" hidden> <input type="text" name="sg" id="106" hidden>
+       <input type="text" name="bh" id="107" hidden> <input type="text" name="hs" id="108" hidden> 
+       <input type="text" name="mt" id="109" hidden> <input type="text" name="ds" id="110" hidden> 
+       <input type="text" name="rg" id="111" hidden> <input type="text" name="cn" id="112" hidden>
+       <input type="text" name="nh" id="113" hidden> <input type="text" name="fl" id="114" hidden> 
+       <input type="text" name="mc" id="115" hidden> <input type="text" name="lv" id="116" hidden> 
+       <input type="text" name="ts" id="117" hidden> <input type="text" name="og" id="118" hidden>
+  
+       </section>
+        
+        
+        
+        
+        
+        <script>
+           
+         startup();
+    
+         var on = 0; 
+         var mistakes = 0;
+         var pauses = 0;
+         var skips = 0
+         var completestatus = 0;
+         var question = 1;
+         var task = 25;
+         var time = 30;
+         var allowed = [8, 13, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57];
+         var main = "Start";
+         var picked = [];
+    
+         document.getElementById("skip").disabled = true; 
+         document.getElementById("input").disabled = true;
+         
+         
+         
+         function tasker() 
+         {
+             if (document.getElementById("tasker").textContent == "25")
+             {
+                 document.getElementById("tasker").textContent = "118";
+                 task = 118;
+             }
+             else if (document.getElementById("tasker").textContent == "118")
+             {
+                 document.getElementById("tasker").textContent = "25";
+                 task = 25;
+             }             
+         }
+         
+         
+                 
+         function control()
+         {           
+             
+             if ( main == "Start")
+             {          
+                 start();
+                                
+                 main = "Pause";
+             }
+             else if (main == "Pause")
+             {   
+                 if (pauses < 2) 
+                 {
+                     
+                 pauses = pauses + 1;
+                             
+                 pause();
+                 
+                 main = "Resume";
+                 }
+                 else
+                 {
+                     document.getElementById("input").focus();
+                 }
+             }
+             else if (main == "Resume")
+             {       
+                 resume();
+                 
+                 main = "Pause";
+             }
+             else if ( main == "Next" || main == "Proceed")
+             {
+                 if (question < task) 
+                 {                 
+                 next();
+                 }
+                 else
+                 {
+                  testcomplete();   
+                 }
+             }
+             else if (main == "Try Again?")
+             {
+                 startup();
+             }
+     
+            document.getElementById("main").textContent = main;              
+        }
+         
+   
+    
+         
+         function startup() 
+         {
+             
+            document.getElementById("status").value = "Get ready!"; 
+                          
+            document.getElementById("time").style.fontSize = "600%";
+            
+            document.getElementById("main").style.marginTop = "11%";
+            
+            document.getElementById("time").style.marginTop = "20%";
+        
+            document.getElementById("input").value = "99";
+            
+            document.getElementById("task").value = "Es";
+            
+            document.getElementById("input").style.color = "darkslategrey";
+            
+            document.getElementById("time").value = "30";
+            
+            document.getElementById("question").value = "";
+            
+            document.getElementById("pauses").value = ""; 
+            
+            document.getElementById("mistakes").value = "";
+
+            document.getElementById("main").textContent = "Start";
+            
+            document.getElementById("tasker").hidden = false;
+                        
+            main = "Start";
+            
+         }
+
+       
+       
+    
+         function start()
+         {
+            on = 1;
+            question = 1;
+            pauses = 0;
+            completestatus = 0; 
+            mistakes = 0;
+            skips = 0;
+            time = 30;
+                       
+            document.getElementById("input").value = "";
+            document.getElementById("status").value = "";
+            document.getElementById("time").value = "30";
+            document.getElementById("question").value = question + " of " + task;
+            document.getElementById("pauses").value = pauses + " of 2";
+            
+            document.getElementById("mistakes").value = mistakes;
+            
+            document.getElementById("input").disabled = false;
+            document.getElementById("skip").disabled = false;
+                       
+            document.getElementById("input").focus();
+            
+            generate();    
+            
+            document.getElementById("tasker").hidden = true;
+         }
+         
+         
+         
+         function pause()
+         {
+             on = 0;
+
+             document.getElementById("pauses").value = pauses + " of 2";
+             document.getElementById("input").disabled = true;
+         }
+         
+         
+         function resume()
+         {
+             on = 1;    
+             document.getElementById("input").disabled = false
+             document.getElementById("input").focus();
+         }
+         
+       
+         function next()
+         {  
+             
+              time = 30;
+              document.getElementById("time").value = time;
+              
+              on = 1;
+              question++;
+                                        
+              generate();
+                 
+              main = "Pause";
+                 
+              document.getElementById("input").value = "";
+              document.getElementById("status").value = "";
+              document.getElementById("question").value = question + " of " + task;
+                 
+              document.getElementById("input").style.color = "darkslategrey";
+           
+              document.getElementById("input").disabled = false;
+              document.getElementById("skip").disabled = false;
+           
+              document.getElementById("input").focus(); 
+                              
+              completestatus = 0;
+              
+         }
+         
+         
+         
+         
+         function skip() 
+         {
+              
+           pause();  
+             
+           if (task == 25) 
+           {              
+               if (skips < 2) 
+               {
+                  time = 30;
+                  
+                  document.getElementById("status").value = "Don't give up!";
+                  document.getElementById("input").value = "";
+                  document.getElementById("input").focus();
+                   
+                  skips = skips + 1;
+                  question = question - 1;
+               }
+               else
+               {
+                 mistakes = mistakes + 1;                 
+                 document.getElementById("mistakes").value = mistakes;
+                 
+                 document.getElementById("status").value = "You lost a mark!";
+                 document.getElementById("main").textContent = "proceed";                 
+               }
+               
+               main = "Proceed";
+               document.getElementById("main").textContent = "Proceed";
+               document.getElementById("skip").disabled = true;
+               
+           } 
+           else
+              {
+                 mistakes = mistakes + 1;                 
+                 document.getElementById("mistakes").value = mistakes;
+                 
+                 document.getElementById("status").value = "You lost a mark!";
+                 document.getElementById("main").textContent = "proceed";                 
+             
+                 main = "Proceed";
+                 document.getElementById("main").textContent = "Proceed";
+                 document.getElementById("skip").disabled = true;          
+               }
+          
+         }
+         
+         
+         
+         
+         
+         function generate()
+         {
+             var random = Math.floor((Math.random() * 118) + 1); 
+             
+             
+             if (picked.includes(random) == false) 
+             {
+                 document.getElementById("task").value = document.getElementById(random).name.substr(0, 1).toUpperCase() + document.getElementById(random).name.substr(1, 2).toLowerCase();                 
+             }
+             else
+             {
+                 generate();
+             }
+                         
+             picked.push(random);                                      
+         }
+         
+         
+         
+         
+         
+         
+         function check()
+         {
+             document.getElementById("input").style.color = "#606060";
+             
+             if (window.event.keyCode == 13)
+             {              
+                 var id = document.getElementById("input").value;  
+
+                 if (document.getElementById("task").value.toLowerCase() == document.getElementById(id).name)
+                 {                
+                     document.getElementById("status").value = "Correct !";
+                     
+                     document.getElementById("input").style.color = "darkslategrey";
+                     
+                 }
+                 else
+                 {
+                     mistakes = mistakes +1;
+                     document.getElementById("mistakes").value = mistakes;
+                     document.getElementById("status").value = "You'll get it next time";
+                     document.getElementById("input").style.color = "#4d0000";
+                 }
+                 
+                     main = "Next";
+                     
+                     document.getElementById("main").textContent = "Next"; 
+                     
+                     pause();
+                     
+                     
+                     if(question == task)
+                     {
+                         testcomplete();
+                     }                     
+             }            
+         }
+         
+         
+         
+         
+         function filter() 
+         {        
+           if (document.getElementById("input").disabled == false) 
+           {
+             
+             if (allowed.includes(window.event.keyCode)) 
+             {
+                 check();
+             } 
+             else
+             {
+                return false
+             }      
+             
+           }
+         }
+         
+         
+         window.setInterval(timer, 1000);
+         
+         
+        
+         function timer()
+         {           
+           if ( on == 1) 
+           {            
+              if (time > 0)
+              {
+               time = time - 1;
+               
+               document.getElementById("time").value = time;                            
+              }
+              else
+              {
+                  timeout();
+              }
+           }               
+         }
+  
+      
+    
+         
+         function testcomplete()
+         {
+            completestatus = 1;
+             
+            document.getElementById("status").value = "Test complete";
+            
+            document.getElementById("time").style.fontSize = "300%";
+            
+            document.getElementById("time").style.marginTop = "26%";
+            
+            document.getElementById("main").style.marginTop = "24.6%";
+            
+            document.getElementById("time").value = task - mistakes + " /" + task;
+            
+            main = "Try Again?";
+            
+            document.getElementById("main").textContent = "Try Again?";           
+         }
+         
+        
+  
+    
+         function timeout()
+         {
+             on = 0;
+             
+             document.getElementById("input").disabled = true;
+             document.getElementById("status").value = "Be quicker!";
+             mistakes = mistakes + 1;
+             document.getElementById("mistakes").value = mistakes;
+             
+             main = "Next";
+             document.getElementById("main").textContent = "Next"; 
+             document.getElementById("skip").disabled = true;            
+         }
+  
+  
+  
+    </script>
+        
+        
+                              
+    </body>
+</html>
