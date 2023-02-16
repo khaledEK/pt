@@ -15,6 +15,8 @@ and open the template in the editor.
         <meta charset="UTF-8">
     
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
         
     </head>
    
@@ -23,59 +25,71 @@ and open the template in the editor.
     <body onkeyup="checkcomplete()">  
         
        
-        
-          
-  
-        
-        
-     <section  onkeydown=" return filter(this)" onkeyup="check()">   
+           
+     <section onkeydown=" return filter(this)" onkeyup="check()">   
       
                       
         <style> 
         
-        input
-        {background-color: lightgrey; font-weight: 300; font-size: 236%; width:4%; text-align: center; border: none; font-stretch: condensed; margin-top: 0.3%}
+        .pt_1920{
+           
+           margin-left: 2.3%; 
+           margin-top: 2.3%;
+        }
+
+
+        .btns_1366{
+
+
+        }
+
+        input{
+           
+           font-size: 326%; width: 4%; font-weight: 300%; background-color: lightgrey; text-align: center; border: none; font-stretch: condensed; margin-top: 0.3%;
+        }
+
+        button{
+
+            outline: none; border-style: none; background-repeat: no-repeat; background-position: center; background-color: white; color: lightgrey; color: transparent; width: 3%;
+        }
         
+
         </style> 
          
          
-   
-       <div style= "width: 1366px; float: center; margin: auto"> 
-           
-           
-           
+    <div id = "wd" style= "width: 1912px; float: center; margin: auto">   
+
            
          <section style= "position: relative; margin-top: 1%">
                     
-           <button  onclick="location.href = 'https://khaledek.github.io/pt/';" id="clear" style=" outline: none; margin-left: 0.9%; border-style: none; background-image: url(back.png); font-size: 190%; background-size: 90%; background-repeat: no-repeat; background-position: center; background-color: white; color: lightgrey; color: transparent; width: 3% ">.</button>
+           <button  onclick="location.href = 'https://khaledek.github.io/pt/';" id="back" style=" margin-left: 0.9%;  background-image: url(back.png); font-size: 190%; background-size: 69%">.</button>
 
-           
-           <button  onclick="classclick()" id="classify" style=" outline: none; margin-left: 29%; border-style: none; background-image: url(class.png); font-size: 120%; background-size: 70%; background-repeat: no-repeat; background-position: center; background-color: white; color: lightgrey; color: transparent; width: 3%">.</button>
+           <button  onclick="classclick()" id="classify" style="margin-left: 30%; background-image: url(class.png); font-size: 120%; background-size: 67%">.</button>
 
-           <button  onclick="clearout()" id="clear" style=" outline: none; margin-left: 2%; border-style: none; background-image: url(erase.png); font-size: 120%; background-size: 60%; background-repeat: no-repeat; background-position: center; background-color: white; color: lightgrey; color: transparent; width: 3% ">.</button>
+           <button  onclick="clearout()" id="clear" style="margin-left: 2%; background-image: url(erase.png); font-size: 150%; background-size: 49%">.</button>
 
-           <button  onmousedown="peek()" onmouseup="back()" onmouseout="back()" id="peak" style=" outline: none; margin-left: 2%; border-style: none; background-image: url(peek.png); font-size: 120%; background-size: 90%; background-repeat: no-repeat; background-position: center; background-color: white; color: lightgrey; color: transparent; width: 3% ">.</button>
+           <button  onmousedown="peek()" onmouseup="back()" onmouseout="back()" id="peak" style="margin-left: 2%; background-image: url(peek.png); font-size: 120%; background-size: 82%">.</button>
      
          </section>     
       
            
            
                       
-       <section style=" float: left; position: relative">
+       <section id = "pt" class = "pt_1920" style=" float: left; position: relative">
            
            
        <img style="width:100%; color: white; margin-top: 2%">    
        
        
        <input type="text" name="h" id="1" maxlength="2" style=" margin-left: 9%">            
-       <input type="text" name="he" id="2" maxlength="2" style=" margin-left: 73.6%"> 
+       <input type="text" name="he" id="2" maxlength="2" style=" margin-left: 70.86%"> 
        
        <br>
                   
        <input type="text" name="li" id="3" maxlength="2" style=" margin-left: 9%">  <input type="text" name="be" id="4" maxlength="2" >
  
        
-       <input type="text" name="b" id="5" maxlength="2" style=" margin-left: 46%"> <input type="text" name="c" id="6" maxlength="2"> <input type="text" name="n" id="7" maxlength="2">
+       <input type="text" name="b" id="5" maxlength="2" style=" margin-left: 44.27%"> <input type="text" name="c" id="6" maxlength="2"> <input type="text" name="n" id="7" maxlength="2">
        <input type="text" name="o" id="8" maxlength="2"> <input type="text" name="f" id="9" maxlength="2"> <input type="text" name="ne" id="10" maxlength="2">
    
        <br> 
@@ -83,7 +97,7 @@ and open the template in the editor.
        <input type="text" name="na" id="11" maxlength="2" style=" margin-left: 9%">  <input type="text" name="mg" id="12" maxlength="2">
        
               
-       <input type="text" name="al" id="13" maxlength="2" style=" margin-left: 46%"> <input type="text" name="si" id="14" maxlength="2"> <input type="text" name="p" id="15" maxlength="2">
+       <input type="text" name="al" id="13" maxlength="2" style=" margin-left: 44.27%"> <input type="text" name="si" id="14" maxlength="2"> <input type="text" name="p" id="15" maxlength="2">
        <input type="text" name="s" id="16" maxlength="2"> <input type="text" name="cl" id="17" maxlength="2"> <input type="text" name="ar" id="18" maxlength="2">
        
        <br> 
@@ -133,7 +147,7 @@ and open the template in the editor.
             
        <img style="width:100%; color: white; margin-top: 2.9%">    
                  
-       <input type="text" name="la" id="57" maxlength="2" style=" margin-left: 17.7%"> <input type="text" name="ce" id="58" maxlength="2"> <input type="text" name="pr" id="59" maxlength="2">
+       <input type="text" name="la" id="57" maxlength="2" style=" margin-left: 17.8%"> <input type="text" name="ce" id="58" maxlength="2"> <input type="text" name="pr" id="59" maxlength="2">
        <input type="text" name="nd" id="60" maxlength="2"> <input type="text" name="pm" id="61" maxlength="2"> <input type="text" name="sm" id="62" maxlength="2">
         
        <input type="text" name="eu" id="63" maxlength="2"> <input type="text" name="gd" id="64" maxlength="2"> <input type="text" name="tb" id="65" maxlength="2">
@@ -143,7 +157,7 @@ and open the template in the editor.
              
        <br>
            
-       <input type="text" name="ac" id="89" maxlength="2" style=" margin-left: 17.7%"> <input type="text" name="th" id="90" maxlength="2"> <input type="text" name="pa" id="91" maxlength="2">
+       <input type="text" name="ac" id="89" maxlength="2" style=" margin-left: 17.8%"> <input type="text" name="th" id="90" maxlength="2"> <input type="text" name="pa" id="91" maxlength="2">
        <input type="text" name="u" id="92" maxlength="2"> <input type="text" name="np" id="93" maxlength="2"> <input type="text" name="pu" id="94" maxlength="2">
         
        <input type="text" name="am" id="95" maxlength="2"> <input type="text" name="cm" id="96" maxlength="2"> <input type="text" name="bk" id="97" maxlength="2">
@@ -155,36 +169,12 @@ and open the template in the editor.
        
        </section>
        
-       
-                
-        
- 
-       
-       </div>
-       
+    </div> 
        
        <script>    
-          
-       function semifill()   //not used
-       {
-           for (var e = 1; e <= 118; e++ ) 
-           {  
-              var name = document.getElementById(e).name;
-            
-              document.getElementById(e).value =  name.substr(0,1).toUpperCase() + name.substr(1,2).toLowerCase();
-            
-              document.getElementById(e).style.color = "darkslategrey";
-            }             
-       }
+         
        
-       </script>
-       
-       
-       
-       
-       
-       <script>
-       
+
        var alkalis = [3, 11, 19, 37, 55, 87];
        var alkaliearths = [4, 12, 20, 38, 56,88];
        var gases = [1, 6, 7, 8, 15, 16, 34];
@@ -209,14 +199,6 @@ and open the template in the editor.
        for (var l2=186;  l2 <= 222; l2++) { excl.push(l2);}
         
                  
-       </script>
-       
-       
-       
-
-              
-       <script>
-       
     
     
     
@@ -309,7 +291,11 @@ and open the template in the editor.
        }
       
          
-       function noclassify() {table.forEach(noclass); function noclass(item){ document.getElementById(item).style.backgroundColor = "lightgrey";}}
+       function noclassify() 
+       {
+        table.forEach(noclass); 
+        function noclass(item){ document.getElementById(item).style.backgroundColor = "lightgrey";}
+       }
       
     
     
@@ -391,7 +377,81 @@ and open the template in the editor.
             }                 
         }
 
-       
+   
+          adjust_size();
+   
+          window.setInterval(adjust_size, 10);  
+          
+          function adjust_size() 
+          {  
+           var w = window.outerWidth;
+  
+           if (w > 1900) 
+           {
+             document.getElementById("wd").style.width = "1912px";
+            
+             document.getElementById("pt").className = "pt_1920";
+
+             table.forEach(e);
+           
+             function e(item) 
+             { 
+               document.getElementById(item).style.fontSize = "326%"; 
+             }
+                
+               document.getElementById("null_57").style.fontSize = "326%";  
+               document.getElementById("null_89").style.fontSize = "326%";
+              
+               document.getElementById("2").style.marginLeft = "70.86%";
+               document.getElementById("5").style.marginLeft = "44.27%";
+               document.getElementById("13").style.marginLeft = "44.27%";
+
+               document.getElementById("57").style.marginLeft = "17.8%";
+               document.getElementById("89").style.marginLeft = "17.8%";
+
+               document.getElementById("back").style.backgroundSize = "69%";
+               document.getElementById("classify").style.backgroundSize = "67%";
+               document.getElementById("classify").style.marginLeft = "30%";
+               document.getElementById("clear").style.backgroundSize = "49%";
+               document.getElementById("clear").style.fontSize = "150%";
+               document.getElementById("peak").style.backgroundSize = "82%";
+           
+               
+           } else if (w > 0 && w < 1900 ) 
+           {
+            document.getElementById("wd").style.width = "1346px";
+
+            document.getElementById("pt").className = "pt_1366";
+
+            table.forEach(e);
+           
+            function e(item) 
+            { 
+              document.getElementById(item).style.fontSize = "236%";
+    
+            }
+             
+              document.getElementById("null_57").style.fontSize = "236%";
+              document.getElementById("null_89").style.fontSize = "236%";
+  
+              document.getElementById("2").style.marginLeft = "73.6%";
+              document.getElementById("5").style.marginLeft = "46%";
+              document.getElementById("13").style.marginLeft = "46%";
+
+              document.getElementById("57").style.marginLeft = "18.2%";
+              document.getElementById("89").style.marginLeft = "18.2%";
+
+              document.getElementById("back").style.backgroundSize = "90%";
+              document.getElementById("classify").style.backgroundSize = "70%";
+              document.getElementById("classify").style.marginLeft = "29%";
+              document.getElementById("clear").style.backgroundSize = "54%";
+              document.getElementById("clear").style.fontSize = "120%";
+              document.getElementById("peak").style.backgroundSize = "90%";
+           
+            }
+  
+          }
+
         
        </script>
        
@@ -401,4 +461,3 @@ and open the template in the editor.
    </body>   
                     
 </html>
-
