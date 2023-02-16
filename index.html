@@ -9,35 +9,49 @@
         <meta charset="UTF-8">
     
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
         
     </head>
     
     
+    <style>
+
+       .btns_1920{
+
+        margin-top: 24%; margin-left: 31%;
+       }  
+       
+       .btns_1366{
+
+        margin-top: 22.4%; margin-left: 24%;
+       } 
+
+       button
+       {
+
+        font-family: Arial; font-size: 170%; color: darkslategrey; background-color: transparent; border: none
+       }
+
+    </style>
+
     
     <body>
  
-        
-        <div style= "width: 1366px; float: center; margin: auto"> 
-             
-        <section style= " margin-top: 22.4%; margin-left: 24%">
+
+        <section id = "btns" class = "btns_1920">
  
-        <button  onmouseover="select()" onmouseout="deselect()" id="bt1" onclick="location.href = 'assemble.html';" style="font-family: Arial; font-size: 170%; color: darkslategrey; background-color: white; border: none"> Assemble Table </button>
-        <button onmouseover="select2()" onmouseout="deselect2()" id="bt2" onclick="location.href = 'atomicnumbers.html';" style="font-family: Arial; font-size: 170%; color: darkslategrey; background-color: white; border: none; margin-left: 3%"> Atomic Numbers Test </button>
-        <button onmouseover="select3()" onmouseout="deselect3()" id="bt3" onclick="location.href = 'symbols.html';" style="font-family: Arial; font-size: 170%; color: darkslategrey; background-color: white; border: none; margin-left: 3%" > Symbols Test </button>
+        <button  onmouseover="select()" onmouseout="deselect()" id="bt1" onclick="location.href = 'assemble.html';"> Assemble Table </button>
+        <button onmouseover="select2()" onmouseout="deselect2()" id="bt2" onclick="location.href = 'atomicnumbers.html';" style="margin-left: 3%"> Atomic Numbers Test </button>
+        <button onmouseover="select3()" onmouseout="deselect3()" id="bt3" onclick="location.href = 'symbols.html';" style="margin-left: 3%" > Symbols Test </button>
               
         </section>
-     
-  
-        </div>
-        
         
         
         
         <script>
             
-            
-            
-            
+                  
                        
           function select() 
           {           
@@ -53,7 +67,6 @@
           
           
           
-        
           function select2() 
           {           
               document.getElementById("bt2").style.color = "#7977ff";          
@@ -65,8 +78,7 @@
           }  
           
                    
-          
-          
+                 
           
           function select3() 
           {           
@@ -79,12 +91,28 @@
           }  
           
           
+
+
+          window.setInterval(adjust_size, 100);  
           
-    
-    
-    
-    
+          function adjust_size() 
+          {  
+  
+           var w = window.outerWidth;
+  
+           if (w > 1700) {
             
+              document.getElementById("btns").className = "btns_1920";
+               
+           } else if (w > 0 && w < 1400 ) 
+           {
+              
+              document.getElementById("btns").className = "btns_1366";
+           }
+  
+          }
+            
+
         </script>
         
         
