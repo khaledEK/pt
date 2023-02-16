@@ -14,24 +14,47 @@ and open the template in the editor.
         <meta charset="UTF-8">
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
     
     </head>
     
     
+    <style>
+    
+      .t{
+
+        color: darkslategrey; background-color: white; border: none; font-family: Georgia; font-weight: 200; font-size: 200%; 
+      }
+
+      .c{
+
+        border: solid; border-color: darkslategrey; border-width: 1px; background-color: white; color: darkslategrey; font-weight: 400; font-size: 132%;  margin-top: 1.7%;
+      }
+
+      .st{
+
+        background-color: white; color: grey; border: none; font-size: 109%; float: right;
+      }
+
+    </style>
+
     
     <body>
  
+
         
-       <div style= "width: 1366px; float: center; margin: auto"> 
+     <div id = "wd" style= "width: 1912px; float: center; margin: auto">  
+
 
 
        <section style= "margin-top: 0.3%; float: left; position: absolute">
                     
-           <button  onclick="location.href = 'https://khaledek.github.io/pt/';" id="clear" style=" outline: none; margin-left: 0.9%; border-style: none; background-image: url(back.png); font-size: 220%; background-size: 100%; background-repeat: no-repeat; background-position: center; background-color: white; color: lightgrey; color: transparent; width: 36% ">..........</button>
+         <button  onclick="location.href = 'https://khaledek.github.io/pt/';" id="clear" style=" outline: none; margin-left: 0.9%; border-style: none; background-image: url(back.png); font-size: 220%; background-size: 100%; background-repeat: no-repeat; background-position: center; background-color: white; color: lightgrey; color: transparent; width: 36% ">..........</button>
           
        </section>           
         
-        <section  style="background-image: url(corner12.png); background-size: 100%; width: 11%; float: right; position: abolute">
+        <section  style="background-image: url(corner12.png); background-size: 100%; width: 11%; float: right; margin-right: 0.5%">
         
             <input id ="question" onmousedown="return false" type = text style="background-color: transparent; color: white; font-family: times; font-size: 200%; border: none; width: 60%; float: right; text-align: center; margin-top: 16%; margin-right: 1%" value="Q">
             
@@ -46,16 +69,16 @@ and open the template in the editor.
             <input onmousedown="return false" id="margin" type="text" style = " width : 3%; margin-left: 19%;  background-color: white; border: none" >
            
             
-            <input onmousedown="return false" id = "task" type="text" style="color: darkslategrey; background-color: white; border: none; font-family: Georgia; font-weight: 200; font-size: 200%; margin-top: 16%; width: 27%; text-align: right" value="Tin">
+            <input onmousedown="return false" id = "task" type="text" class = "t" style="margin-top: 16%; width: 27%; text-align: right" value="Tin">
 
             
-            <input id="leftbr" onmousedown="return false" type="text" style="color: darkslategrey; background-color: white; border: none; font-family: Georgia; font-weight: 200; font-size: 200%; margin-top: 17%; width: 1%" value="(">
+            <input id="leftbr" onmousedown="return false" type="text" class = "t" style=" margin-top: 17%; width: 1%" value="(">
 
             
-            <input onkeydown="return filter(this)" id = "input" maxlength="2" type="text" style=" outline: none; color: darkslategrey; background-color: white; border: none; font-family: Georgia; font-weight: 200; font-size: 200%; margin-top: 17%; width: 4.9%; text-align: center" value="Sn">
+            <input onkeydown="return filter(this)" id = "input" maxlength="2" type="text" class = "t" style=" outline: none; margin-top: 17%; width: 4.9%; text-align: center" value="Sn">
 
             
-            <input  id="rightbr" onmousedown="return false" type="text" style="color: darkslategrey; background-color: white; border: none; font-family: Georgia; font-weight: 200; font-size: 200%; margin-top: 17%; width: 1%" value=")">
+            <input  id="rightbr" onmousedown="return false" type="text" class = "t" style=" margin-top: 17%; width: 1%" value=")">
 
            
             <input onmousedown="return false" id="result" type="text" style="color: darkslategrey; background-color: white; border: none; font-family: arial; font-weight: 200; font-size: 170%; margin-top: 17%; width: 6%" value="">
@@ -66,10 +89,11 @@ and open the template in the editor.
         <br>
         
           
-        <section style="margin-top: 0.5%">
+        <section style="float: center;  margin-top: 0.5%">
             
-           <img src="sp4.png" style="position: absolute; width: 72%">
-           <img src="sp4.png" style="position: absolute; margin-top: 0.3%; width: 72%">
+           <img src="sp4.png" style="width: 92%; margin-left: 4%">
+           <span style="display: block; margin-bottom: -0.7em"> </span>
+           <img src="sp4.png" style="margin-top: 0.3%; width: 92%; margin-left: 4%">
 
                        
         </section>
@@ -81,13 +105,13 @@ and open the template in the editor.
         <section>
             
       
-        <button disabled id="skip" onclick="skip()" style="border: solid; border-color: darkslategrey; border-width: 1px; background-color: white; color: darkslategrey; font-weight: 400; font-size: 132%; width: 9%; margin-left: 34.6%; margin-top: 1.7%">Skip</button>
+        <button disabled id="skip" onclick="skip()" class="c" style=" width: 9%; margin-left: 34.6%">Skip</button>
 
-        <button disabled id ="time" onclick="timecontrol()"  onmouseover="pauser()" onmouseout = "clock()" style=" background-size: 70%; background-position: left; background-repeat: no-repeat; background-image: url(clock.png); border: solid; border-color: darkslategrey; border-width: 1px; background-color: white; color: darkslategrey; font-weight: 400; font-size: 132%; width: 9%; margin-left: 2%; margin-top: 1.7%">30</button>
+        <button disabled id ="time" onclick="timecontrol()"  onmouseover="pauser()" onmouseout = "clock()"  class="c" style=" background-size: 70%; background-position: left; background-repeat: no-repeat; background-image: url(clock.png); width: 9%; margin-left: 2%">30</button>
 
-        <button onclick="control()" id="starter" style="border: solid; border-color: darkslategrey; border-width: 1px; background-color: white; color: darkslategrey; font-weight: 400; font-size: 132%; width: 9%; margin-left: 2%; margin-top: 1.7%">Start</button>
+        <button onclick="control()" id="starter"  class="c" style="width: 9%; margin-left: 2%">Start</button>
               
-        <button onclick="tasker()" id="tasker" style=" outline: none; border: solid; border-color: darkslategrey; border-width: 1px; background-color: white; color: darkslategrey; font-weight: 400; font-size: 132%; width: 6%; margin-left: 1%; margin-top: 1.7%; border: none">[ 25 ]</button>
+        <button onclick="tasker()" id="tasker" style="outline: none; border: solid; border-color: darkslategrey; border-width: 1px; background-color: white; color: darkslategrey; font-weight: 400; font-size: 132%; width: 6%; margin-left: 1%; margin-top: 1.7%; border: none">[ 25 ]</button>
 
 
         </section>
@@ -100,22 +124,23 @@ and open the template in the editor.
              
         <section style="float: right">
         
-            <input onmousedown="return false" type="text" id="mistakes" style=" background-color: white; color: grey; border: none; font-size: 109%; float: right; width: 4%; margin-top: 21.4%">
+            <input onmousedown="return false" type="text" id="mistakes" class="st" style="  width: 4%; margin-top: 23%">
             
-            <input onmousedown="return false" type="text" value ="Mistakes: " style="background-color: white; color: grey; border: none; font-size: 109%; float: right; width: 9%; margin-top: 21.4%">
+            <input onmousedown="return false" type="text" id="m" value ="Mistakes: " class="st" style="width: 9%; margin-top: 23%">
 
-            <input onmousedown="return false" type="text" style="background-color: white; color: grey; border: none; font-size: 100%; float: right; width: 9%; margin-top: 21.4%">
+            <input onmousedown="return false" type="text" id = "duh" class="st" style=" width: 9%; margin-top: 23%">
 
-            <input onmousedown="return false" type="text" id="paused" style="background-color: white; color: grey; border: none; font-size: 109%; float: right; width: 4%; margin-top: 21.4%">
+            <input onmousedown="return false" type="text" id="paused" class="st" style="width: 4%; margin-top: 23%">
             
-            <input onmousedown="return false" type="text" value ="Paused: " style="background-color: white; color: grey; border: none; font-size: 109%; float: right; width: 7%; margin-top: 21.4%">
+            <input onmousedown="return false" type="text" id="p" value ="Paused: " class="st" style="width: 7%; margin-top: 23%">
 
                        
         </section>
         
         
-        </div>
+      </div>
           
+
        <section>
         
            <input type="text" name="h" id="1" value="Hydrogen" hidden>   <input type="text" name="he" id="2" value="Helium" hidden> 
@@ -274,6 +299,10 @@ and open the template in the editor.
             document.getElementById("input").fontSize = "132%";
             
             document.getElementById("input").style.color = "darkslategrey";
+
+            document.getElementById("paused").value = "no";
+            document.getElementById("mistakes").value = "";
+
          }
     
     
@@ -733,6 +762,69 @@ and open the template in the editor.
             
          }
          
+
+         adjust_size();
+
+         window.setInterval(adjust_size, 10);  
+          
+          function adjust_size() 
+          {  
+           var w = window.outerWidth;
+  
+           if (w > 1900) 
+           {
+             document.getElementById("wd").style.width = "1912px";
+
+             document.getElementById("question").style.marginTop = "22%";
+             document.getElementById("question").style.fontSize = "240%";
+
+             document.getElementById("skip").style.fontSize = "142%";
+             document.getElementById("time").style.fontSize = "142%";
+             document.getElementById("starter").style.fontSize = "142%";
+
+             document.getElementById("skip").style.width = "7%";
+             document.getElementById("time").style.width = "7%";
+             document.getElementById("starter").style.width = "7%";
+
+             document.getElementById("skip").style.marginLeft = "39%";
+             document.getElementById("time").style.marginLeft = "1.4%";
+             document.getElementById("starter").style.marginLeft = "1.4%";
+
+             document.getElementById("mistakes").style.marginTop = "40%";
+             document.getElementById("m").style.marginTop = "40%";
+             document.getElementById("duh").style.marginTop = "40%";
+             document.getElementById("paused").style.marginTop = "40%";
+             document.getElementById("p").style.marginTop = "40%";
+            
+                
+           } else if (w > 0 && w < 1900 ) 
+           {
+            document.getElementById("wd").style.width = "1346px";
+
+            document.getElementById("question").style.marginTop = "16%";
+            document.getElementById("question").style.fontSize = "200%";
+
+            document.getElementById("skip").style.fontSize = "132%";
+            document.getElementById("time").style.fontSize = "132%";
+            document.getElementById("starter").style.fontSize = "132%";
+
+            document.getElementById("skip").style.width = "9%";
+            document.getElementById("time").style.width = "9%";
+            document.getElementById("starter").style.width = "9%";
+
+            document.getElementById("skip").style.marginLeft = "35%";
+            document.getElementById("time").style.marginLeft = "2%";
+            document.getElementById("starter").style.marginLeft = "2%";
+
+            document.getElementById("mistakes").style.marginTop = "23%";
+            document.getElementById("m").style.marginTop = "23%";
+            document.getElementById("duh").style.marginTop = "23%";
+            document.getElementById("paused").style.marginTop = "23%";
+            document.getElementById("p").style.marginTop = "23%";
+   
+           }
+  
+          }
                  
 
         </script>
