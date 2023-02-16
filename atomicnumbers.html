@@ -11,15 +11,38 @@ and open the template in the editor.
         <title>Atomic Number Test</title>
         
         <meta charset="UTF-8">    
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
    
     </head>
     
     
-    <body>
-      
+    <style>
+
+    .c{
+
+        border: solid; border-color: darkslategrey; border-width: 1px; background-color: white; color: darkslategrey; font-weight: 500; font-size: 132%; width: 7.9%;
+     }
+
+     .s{
+        
+        color: darkslategrey; background-color: white; border: none;  font-size: 200%; font-weight: 490;
+     }
+
+     .sd{
+
+        color: lightgrey; width: 100%; background-color: white; border: none; text-align: center; font-size: 200%; margin-top: 3.2%; font-family: Arial;
+     }
+
+    </style>
+
+
+    <body>    
     
-    <div style= "width: 1366px; float: center; margin: auto"> 
+
+    <div id = "wd" style= "width: 1912px; float: center; margin: auto"> 
 
         
       <section style="width: 33%; float: left">  
@@ -31,17 +54,23 @@ and open the template in the editor.
             </section>       
           
             
-       <section style="float: left">    
-            
-        <button id="next" style="border: solid; border-color: darkslategrey; border-width: 1px; background-color: white; color: darkslategrey; font-weight: 500; position: absolute; font-size: 132%; width: 7.9%; margin-left: 5.5%; margin-top: 19%">Next</button>
-                    
-        <button onclick="skip()" id="skip" style="border: solid; border-color: darkslategrey; border-width: 1px; background-color: white; color: darkslategrey; font-weight: 500; position: absolute; font-size: 132%; width: 7.9%; margin-left: 14%; margin-top: 19%">Skip</button>               
-                
-        <input onmousedown="return false" id="task" value="Es" type="text" style="color: darkslategrey; background-color: white; width: 17%; font-size: 920%; text-align: center; margin-top: 9%; margin-left: 5.5%; position: absolute; border: none; font-weight: 490;font-family: times">
-      
-        <input onkeydown="return filter(this)" id="input" value="99" type="text" maxlength="3" style=" outline: none; color: darkslategrey; background-color: white; width: 11%; font-size: 347%; text-align: center; font-weight: 500; margin-top: 7%; margin-left: 3.99%; position: absolute; border: none">
+           
+       
+        <input onkeydown="return filter(this)" id="input" value="99" type="text" maxlength="3" style=" outline: none; color: darkslategrey; background-color: white; width: 11%; font-size: 347%; text-align: center; font-weight: 500; margin-top: 7%; margin-left: 3.99%; border: none">
 
-        </section>    
+        <span style="display: block; margin-bottom: -1.9em"> </span>
+
+        <input onmousedown="return false" id="task" value="Es" type="text" style="position: relative; color: darkslategrey; background-color: transparent; width: 17%; font-size: 920%; text-align: center; margin-top: 9%; margin-left: 5.5%; border: none; font-weight: 490; font-family: times">
+
+        <br>
+
+        <button id="next" onmousedown="return false" class="c" style="margin-left: 5.5%; margin-top: 19%">Next</button>
+                    
+        <button onclick="skip()" id="skip" class="c" style="margin-left: 14%; margin-top: 19%">Skip</button>               
+                
+        
+      
+           
                 
       </section>
      
@@ -49,19 +78,19 @@ and open the template in the editor.
         <section style="float: right; width: 37%">
             
 
-            <input onmousedown="return false" value="Question" type="text" style="color: darkslategrey; width: 61.5%; background-color: white; border: none; text-align: right; font-size: 200%; margin-top: 20%; font-family: times; font-weight: 490; float: left">
+            <input onmousedown="return false" id = "q" value="Question" type="text" class="s" style="width: 61.5%;  text-align: right; margin-top: 20%; font-family: times; float: left">
            
             <button onclick="tasker()" id="tasker" style=" color: darkslategrey; position: relative; font-size: 160%; margin-top: 20%; margin-left: 3%; background-color: white; border: solid; border-width: 1px; float: left">25</button>
                    
-            <input id="question" onmousedown="return false" type="text" style="color: lightgrey; width: 100%; background-color: white; border: none; text-align: center; font-size: 200%; margin-top: 3.2%; font-family: Arial">
+            <input id="question" onmousedown="return false" type="text" class="sd">
             
-            <input onmousedown="return false" type="text" value="Mistakes" style="color: darkslategrey; width: 100%; background-color: white; border: none; text-align: center; font-size: 200%; margin-top: 11%; font-family: times; font-weight: 490">
+            <input onmousedown="return false" type="text" id = "m" value="Mistakes" class="s" style="width: 100%; text-align: center; margin-top: 11%; font-family: times">
             
-            <input id = "mistakes" onmousedown="return false"  value="" type="text" style="color: lightgrey; width: 100%; background-color: white; border: none; text-align: center; font-size: 200%; margin-top: 3.2%; font-family: Arial">
+            <input id = "mistakes" onmousedown="return false"  value="" type="text" class="sd">
              
-            <input onmousedown="return false" type="text" value ="Pauses" style="color: darkslategrey; width: 100%; background-color: white; border: none; text-align: center; font-size: 200%; margin-top: 11%; font-family: times; font-weight: 490">
+            <input onmousedown="return false" type="text" id = "p" value ="Pauses" class="s" style="width: 100%; text-align: center; margin-top: 11%; font-family: times">
             
-            <input id="pauses" onmousedown="return false"  value="" type="text" style="color: lightgrey; width: 100%; background-color: white; border: none; text-align: center; font-size: 200%; margin-top: 3.2%; font-family: Arial">
+            <input id="pauses" onmousedown="return false"  value="" type="text" class="sd">
 
                         
         </section>
@@ -81,14 +110,14 @@ and open the template in the editor.
              
             <br>                 
   
-            <button  style="position: relative; font-size: 160%; margin-top: 67.9%; background-color: darkslategrey; border: none"></button>
+            <button id = "vr"  style="position: relative; font-size: 160%; margin-top: 67.9%; background-color: darkslategrey; border: none"></button>
 
 
 
         </section>
         
 
-        </div>
+    </div>
 
 
        <section>
@@ -175,10 +204,6 @@ and open the template in the editor.
          var main = "Start";
          var picked = [];
     
-         document.getElementById("skip").disabled = true; 
-         document.getElementById("input").disabled = true;
-         
-         
          
          function tasker() 
          {
@@ -277,7 +302,11 @@ and open the template in the editor.
             document.getElementById("main").textContent = "Start";
             
             document.getElementById("tasker").hidden = false;
-                        
+     
+            document.getElementById("skip").disabled = true; 
+            
+            document.getElementById("input").disabled = true;
+                                
             main = "Start";
             
          }
@@ -464,7 +493,8 @@ and open the template in the editor.
                      document.getElementById("main").textContent = "Next"; 
                      
                      pause();
-                     
+
+                     document.getElementById("skip").disabled = true;                
                      
                      if(question == task)
                      {
@@ -554,6 +584,121 @@ and open the template in the editor.
              document.getElementById("skip").disabled = true;            
          }
   
+
+         adjust_size();
+           
+         window.setInterval(adjust_size, 10);  
+          
+          function adjust_size() 
+          {  
+           var w = window.outerWidth;
+  
+           if (w > 1900) 
+           {
+             document.getElementById("wd").style.width = "1901px";
+
+                  
+             document.getElementById("input").style.fontSize = "420%";
+             document.getElementById("input").style.width = "20%";
+             document.getElementById("input").style.marginLeft = "30%";
+             document.getElementById("input").style.marginTop = "40%";
+
+             document.getElementById("task").style.fontSize = "1200%";
+             document.getElementById("task").style.width = "40%";
+             document.getElementById("task").style.marginLeft = "35.5%";
+             document.getElementById("task").style.marginTop = "0%";
+
+             document.getElementById("next").style.fontSize = "160%";
+             document.getElementById("next").style.width = "23%";
+             document.getElementById("next").style.marginLeft = "32.5%";
+             document.getElementById("next").style.marginTop = "3%";
+
+             document.getElementById("skip").style.fontSize = "160%";
+             document.getElementById("skip").style.width = "23%";
+             document.getElementById("skip").style.marginLeft = "2%";
+             document.getElementById("skip").style.marginTop = "3%";
+
+
+             document.getElementById("status").style.marginTop = "42%";
+             document.getElementById("status").style.fontSize = "220%";
+
+             document.getElementById("time").style.marginTop = "22%";
+             document.getElementById("time").style.fontSize = "700%";
+
+             document.getElementById("main").style.fontSize = "200%";
+
+             document.getElementById("vr").style.marginTop = "74%";
+
+             document.getElementById("q").style.textAlign= "right";
+             document.getElementById("q").style.width = "59.7%";
+             document.getElementById("q").style.fontSize = "240%";
+             document.getElementById("q").style.marginTop = "25%";
+             document.getElementById("question").style.fontSize = "240%";
+
+             document.getElementById("tasker").style.marginTop = "26%";
+
+             document.getElementById("m").style.fontSize = "240%";
+             document.getElementById("mistakes").style.fontSize = "240%";
+
+             document.getElementById("p").style.fontSize = "240%";
+             document.getElementById("pauses").style.fontSize = "240%";
+             
+          
+               
+           } else if (w > 0 && w < 1900 ) 
+           {
+             document.getElementById("wd").style.width = "1342px";
+             
+             document.getElementById("input").style.fontSize = "370%";
+             document.getElementById("input").style.width = "20%";
+             document.getElementById("input").style.marginLeft = "25%";
+             document.getElementById("input").style.marginTop = "29%";
+
+             document.getElementById("task").style.fontSize = "920%";
+             document.getElementById("task").style.width = "40%";
+             document.getElementById("task").style.marginLeft = "32%";
+             document.getElementById("task").style.marginTop = "0%";
+
+             document.getElementById("next").style.fontSize = "140%";
+             document.getElementById("next").style.width = "23%";
+             document.getElementById("next").style.marginLeft = "29%";
+             document.getElementById("next").style.marginTop = "3%";
+
+             document.getElementById("skip").style.fontSize = "140%";
+             document.getElementById("skip").style.width = "23%";
+             document.getElementById("skip").style.marginLeft = "2%";
+             document.getElementById("skip").style.marginTop = "3%";
+
+
+             document.getElementById("status").style.marginTop = "27%";
+             document.getElementById("status").style.fontSize = "170%";
+
+             document.getElementById("time").style.marginTop = "20%";
+             document.getElementById("time").style.fontSize = "600%";
+
+             document.getElementById("main").style.fontSize = "170%";
+
+             document.getElementById("vr").style.marginTop = "80.2%";
+
+
+             document.getElementById("q").style.width = "61.5%";
+             document.getElementById("q").style.fontSize = "200%";
+             document.getElementById("q").style.marginTop = "20%";
+             document.getElementById("question").style.fontSize = "200%";
+
+             document.getElementById("tasker").style.marginTop = "20%";
+
+             document.getElementById("m").style.fontSize = "200%";
+             document.getElementById("mistakes").style.fontSize = "200%";
+
+             document.getElementById("p").style.fontSize = "200%";
+             document.getElementById("pauses").style.fontSize = "200%";
+
+   
+           }
+  
+          }
+
   
   
     </script>
