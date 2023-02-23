@@ -36,6 +36,11 @@ and open the template in the editor.
         color: lightgrey; width: 100%; background-color: white; border: none; text-align: center; font-size: 200%; margin-top: 3.2%; font-family: Arial;
      }
 
+     .m{
+
+        border: solid; border-color: darkslategrey; border-width: 1px; background-color: darkslategrey; color: white; font-weight: 300; font-size: 200%; width: 99.5%; text-align: center; margin-top: 1%; white-space: pre-wrap;
+     }
+
     </style>
 
 
@@ -108,16 +113,20 @@ and open the template in the editor.
             
             <button onclick="control()" id="main" style="background-color: darkslategrey; color: white; border: solid; border-color: white; font-size: 170%; width: 60%; margin-left: 19%; margin-top: 11%">Start</button>
              
-            <br>                 
+            <br> 
+            
+            <button onclick="see_mistakes()" id="see" disabled style="background-color: darkslategrey; color: darkslategrey; border: none; font-size: 120%; width: 60%; margin-left: 19%; margin-top: 7%">See Mistakes</button>
+
+            <br>
   
             <button id = "vr"  style="position: relative; font-size: 160%; margin-top: 67.9%; background-color: darkslategrey; border: none"></button>
 
 
 
         </section>
-        
 
     </div>
+
 
 
        <section>
@@ -203,7 +212,28 @@ and open the template in the editor.
          var allowed = [8, 13, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57];
          var main = "Start";
          var picked = [];
+
+         var mistake_id = [];
+         var mistake_in = [];
     
+               
+         var rad;
+         
+
+         function see_mistakes() 
+         { 
+
+            var elements = document.getElementsByClassName("m");
+
+            for (var e = 0; e < mistake_id.length; e++) 
+            {
+                elements[e].hidden = false;
+            }
+
+            document.getElementById("see").hidden = true;
+         }
+
+
          
          function tasker() 
          {
@@ -265,7 +295,14 @@ and open the template in the editor.
              }
              else if (main == "Try Again?")
              {
-                 startup();
+                var elements = document.getElementsByClassName("m");
+
+                for (var e = 0; e < mistake_id.length; e++) 
+                {
+                elements[0].remove();
+                }
+
+                startup();
              }
      
             document.getElementById("main").textContent = main;              
@@ -306,9 +343,19 @@ and open the template in the editor.
             document.getElementById("skip").disabled = true; 
             
             document.getElementById("input").disabled = true;
+
+            document.getElementById("see").disabled = true;
+            document.getElementById("see").style.color = "darkslategrey";
+            document.getElementById("see").hidden = false;
+            
                                 
             main = "Start";
             
+            mistake_id = [];
+            mistake_in = [];
+
+           completestatus = 0;
+
          }
 
        
@@ -416,7 +463,8 @@ and open the template in the editor.
                  document.getElementById("mistakes").value = mistakes;
                  
                  document.getElementById("status").value = "You lost a mark!";
-                 document.getElementById("main").textContent = "proceed";                 
+                 document.getElementById("main").textContent = "proceed";   
+                 
                }
                
                main = "Proceed";
@@ -437,11 +485,11 @@ and open the template in the editor.
                  document.getElementById("skip").disabled = true;          
                }
           
+               mistake_id.push(rad);
+           
          }
          
-         
-         
-         
+   
          
          function generate()
          {
@@ -450,7 +498,9 @@ and open the template in the editor.
              
              if (picked.includes(random) == false) 
              {
-                 document.getElementById("task").value = document.getElementById(random).name.substr(0, 1).toUpperCase() + document.getElementById(random).name.substr(1, 2).toLowerCase();                 
+                 document.getElementById("task").value = document.getElementById(random).name.substr(0, 1).toUpperCase() + document.getElementById(random).name.substr(1, 2).toLowerCase(); 
+                 
+                 rad = random;
              }
              else
              {
@@ -486,7 +536,14 @@ and open the template in the editor.
                      document.getElementById("mistakes").value = mistakes;
                      document.getElementById("status").value = "You'll get it next time";
                      document.getElementById("input").style.color = "#4d0000";
-                 }
+
+
+
+                     mistake_id.push(rad);
+
+                     mistake_in.push(id);
+                 
+                }
                  
                      main = "Next";
                      
@@ -564,7 +621,53 @@ and open the template in the editor.
             
             main = "Try Again?";
             
-            document.getElementById("main").textContent = "Try Again?";           
+            document.getElementById("main").textContent = "Try Again?"; 
+
+            document.getElementById("see").disabled = false;
+            document.getElementById("see").style.color = "grey";
+            
+            
+            
+            for(var e = 0; e < mistake_id.length; e++)
+            {
+                if(mistake_id[e] != "")
+                {
+                    var mistake =  document.createElement("button");
+
+                    mistake.className = "m";
+
+                    if (mistake_in[e] != null) 
+                    {
+
+                    mistake.textContent = "[ " + document.getElementById(mistake_id[e]).name.substr(0,1).toUpperCase() + document.getElementById(mistake_id[e]).name.substr(1,2) + " ]" 
+                    + " is " 
+                    + "[ " + document.getElementById(mistake_id[e]).id + " ]" 
+                    + "  not  " 
+                    + "[ " + mistake_in[e] + " ]" 
+                    + " which is " 
+                    + "[ " + document.getElementById(mistake_in[e]).name.substr(0,1).toUpperCase() + document.getElementById(mistake_in[e]).name.substr(1,2).toLowerCase() + " ]" ; 
+
+
+                    }
+                    else
+                    {
+                        mistake.textContent = "[ " + document.getElementById(mistake_id[e]).name.substr(0,1).toUpperCase() + document.getElementById(mistake_id[e]).name.substr(1,2) + " ]" 
+                    + " is " 
+                    + "[ " + document.getElementById(mistake_id[e]).id + " ]";
+
+                    }
+              
+                    mistake.hidden = true;
+
+                    document.getElementById("wd").append(mistake);
+
+
+                }
+
+            }
+
+
+
          }
          
         
@@ -581,7 +684,9 @@ and open the template in the editor.
              
              main = "Next";
              document.getElementById("main").textContent = "Next"; 
-             document.getElementById("skip").disabled = true;            
+             document.getElementById("skip").disabled = true;    
+             
+             mistake_id.push(rad);
          }
   
 
@@ -604,8 +709,8 @@ and open the template in the editor.
              document.getElementById("input").style.marginTop = "40%";
 
              document.getElementById("task").style.fontSize = "1200%";
-             document.getElementById("task").style.width = "40%";
-             document.getElementById("task").style.marginLeft = "35.5%";
+             document.getElementById("task").style.width = "49%";
+             document.getElementById("task").style.marginLeft = "31.9%";
              document.getElementById("task").style.marginTop = "0%";
 
              document.getElementById("next").style.fontSize = "160%";
@@ -627,7 +732,16 @@ and open the template in the editor.
 
              document.getElementById("main").style.fontSize = "200%";
 
-             document.getElementById("vr").style.marginTop = "74%";
+
+             if(completestatus == 1) 
+             {
+                document.getElementById("vr").style.marginTop = "48%";
+             }
+             else
+             {
+                document.getElementById("vr").style.marginTop = "62%";
+             }
+
 
              document.getElementById("q").style.textAlign= "right";
              document.getElementById("q").style.width = "59.7%";
@@ -655,8 +769,8 @@ and open the template in the editor.
              document.getElementById("input").style.marginTop = "29%";
 
              document.getElementById("task").style.fontSize = "920%";
-             document.getElementById("task").style.width = "40%";
-             document.getElementById("task").style.marginLeft = "32%";
+             document.getElementById("task").style.width = "53%";
+             document.getElementById("task").style.marginLeft = "25.9%";
              document.getElementById("task").style.marginTop = "0%";
 
              document.getElementById("next").style.fontSize = "140%";
@@ -678,7 +792,15 @@ and open the template in the editor.
 
              document.getElementById("main").style.fontSize = "170%";
 
-             document.getElementById("vr").style.marginTop = "80.2%";
+
+             if(completestatus == 1) 
+             {
+                document.getElementById("vr").style.marginTop = "51.5%";
+             }
+             else
+             {
+                document.getElementById("vr").style.marginTop = "66%";
+             }
 
 
              document.getElementById("q").style.width = "61.5%";
