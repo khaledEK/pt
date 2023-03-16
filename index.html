@@ -19,12 +19,12 @@
 
        .btns_1920{
 
-        margin-top: 24%; margin-left: 31%;
+        margin-top: 24%; margin-left: 25%;
        }  
        
        .btns_1366{
 
-        margin-top: 22.4%; margin-left: 24%;
+        margin-top: 22.4%; margin-left: 16%;
        } 
 
        button
@@ -41,7 +41,8 @@
 
         <section id = "btns" class = "btns_1920">
  
-        <button  onmouseover="select()" onmouseout="deselect()" id="bt1" onclick="location.href = 'assemble.html';"> Assemble Table </button>
+        <button onmouseover="select4()" onmouseout="deselect4()" id="bt4" onclick="location.href = 'https://khaledek.github.io/ptable/index.html';" style="margin-left: 3%" > Study </button>
+        <button  onmouseover="select()" onmouseout="deselect()" id="bt1" onclick="location.href = 'assemble.html';" style="margin-left: 3%"> Assemble Table </button>
         <button onmouseover="select2()" onmouseout="deselect2()" id="bt2" onclick="location.href = 'atomicnumbers.html';" style="margin-left: 3%"> Atomic Numbers Test </button>
         <button onmouseover="select3()" onmouseout="deselect3()" id="bt3" onclick="location.href = 'symbols.html';" style="margin-left: 3%" > Symbols Test </button>
               
@@ -89,6 +90,18 @@
           {           
               document.getElementById("bt3").style.color = "darkslategrey";          
           }  
+
+
+
+          function select4() 
+          {           
+              document.getElementById("bt4").style.color = "#7977ff";          
+          } 
+          
+          function deselect4() 
+          {           
+              document.getElementById("bt4").style.color = "darkslategrey";          
+          } 
           
           
 
